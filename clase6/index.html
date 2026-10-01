@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Condicionales</title>
+</head>
+<body>
+    <script>
+        // Ejercicio 4
+        let nota = 4;
+
+        if (nota >= 6){
+            console.log("Aprobado");
+        }else{
+            console.log("Desaprobado");
+        }
+
+        //Ejercicio 5
+        let contrasenia = prompt("Ingrese su contraseña:");
+
+        if ( contrasenia === "789"){
+            console.log("ACCESO CORRECTO");
+        }else{
+            console.log("ACCESO DENEGADO")
+        }
+
+        //Ejercicio 6
+        let numero = parseInt(prompt("Ingrese un número:"));
+
+        let resultado = numero % 2;
+
+        if ( resultado === 0){
+            console.log("El número ingresado es PAR");
+        }else{
+            console.log("El número ingresado es IMPAR")
+        }
+
+        //Ejercicio 6 (sin variable auxiliar)
+        let num = parseInt(prompt("Ingrese un número:"));
+
+        if ( num % 2 === 0){
+            console.log("El número ingresado es PAR");
+        }else{
+            console.log("El número ingresado es IMPAR")
+        }
+
+        //Ejercicio 6 (con operador NOT)
+        let _num = parseInt(prompt("Ingrese un número:"));
+
+        if ( !(_num % 2) ){
+            console.log("El número ingresado es PAR");
+        }else{
+            console.log("El número ingresado es IMPAR")
+        }
+    </script>
+</body>
+</html>
