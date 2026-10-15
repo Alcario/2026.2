@@ -1,0 +1,32 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funciones</title>
+    </head>
+    <body>
+        <script>
+            function clasificarEdad(edad){
+                if(edad < 13){
+                    return "Niño";
+                }else if(edad < 17){
+                    return "Adolescente";
+                }else if(edad < 59){
+                    return "Adulto";
+                }else{
+                    return "Adulto mayor";
+                }
+            }
+
+            function mensajePersonalizado(nombre, edad){
+                return "Hola " + nombre +", con " + edad + " eres " + clasificarEdad(edad);
+            }
+
+            let nombre = prompt("Ingrese su nombre: ");
+            let edad = parseInt(prompt("Ingrese su edad: "));
+
+            console.log(mensajePersonalizado(nombre, edad));
+        </script>
+    </body>
+    </html>
