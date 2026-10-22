@@ -19,7 +19,7 @@ function App() {
       nombre: "React",
       profesor: "Luciana",
       duracion: "3 semestres",
-      disponibilidad: true
+      disponibilidad: false
     },
   ]
 
@@ -30,27 +30,19 @@ function App() {
 
       <h2>Nuestros cursos</h2>
 
-      <div>
-        <h3>HTML y CSS</h3>
-        <p>Profesor: Juancito</p>
-        <p>Duración: 2 semestres</p>
-        <p>Inscripciones abiertas</p>
-      </div>
-
-      <div>
-        <h3>JavaScript</h3>
-        <p>Profesor: Lola</p>
-        <p>Duración: 3 semestres</p>
-        <p>Inscripciones abiertas</p>
-      </div>
-
-      <div>
-        <h3>React</h3>
-        <p>Profesor: Luciana</p>
-        <p>Duración: 3 semestres</p>
-        <p>Inscripciones abiertas</p>
-      </div>
-      
+      {cursos.map((curso) => (
+        <div key={curso.id}>
+          <h3>Curso: {curso.nombre}</h3>
+          <p>Profesor: {curso.profesor}</p>
+          <p>Duración: {curso.duracion}</p>
+          {curso.disponibilidad ? (
+            <p>Inscripciones abiertas</p>
+            ) : (
+              <p>Inscripciones cerradas</p>
+            )}
+          <hr />
+        </div>
+      ))}
     </div>
   )  
 }
